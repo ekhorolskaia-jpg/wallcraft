@@ -1,0 +1,578 @@
+<!-- ============================================================
+  WALLCRAFT NC — V1 (Ochre Editorial)
+  Вставка в Тильду: блок T123 «HTML-код» → вставить весь этот файл.
+  Фото и видео: github.com/ekhorolskaia-jpg/wallcraft/images (через CDN jsDelivr)
+============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300..600;1,7..72,300..600&family=Jost:wght@300..600&display=swap">
+<style>
+#wc,#wc *{box-sizing:border-box}
+#wc{width:100%;font-family:'Jost',sans-serif;color:#1C1A16;background:#F6F3EF;-webkit-font-smoothing:antialiased}
+#wc h1,#wc h2,#wc h3,#wc p,#wc figure,#wc blockquote{margin:0}
+#wc a{color:#1C1A16}
+#wc a:hover{color:#8A5A1C}
+#wc img{display:block;max-width:100%}
+#wc .serif{font-family:'Literata',serif}
+#wc .cap{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#5E574E}
+#wc .muted{color:#5E574E}
+#wc .ph{position:relative;background:#CDBFAC;overflow:hidden}
+#wc .ph.dk{background:#2E2924}
+#wc .ph img.fill,#wc .ph video.fill{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#wc .b1,#wc .b2{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;text-decoration:none;font:500 15px 'Jost',sans-serif;letter-spacing:.02em;transition:all .25s;cursor:pointer}
+#wc .b1{background:#1C1A16;color:#F6F3EF;border:0}
+#wc .b1:hover{background:#3A342C;color:#fff}
+#wc .b2{border:1px solid #1C1A16;color:#1C1A16;background:none}
+#wc .b2:hover{background:#1C1A16;color:#F6F3EF}
+#wc .ico{width:16px;height:16px;flex:none}
+
+/* header (mobile) */
+#wc .mh,#wc .mmenu{display:none}
+/* hero */
+#wc .hero{display:grid;grid-template-columns:1fr 1fr;min-height:860px}
+#wc .hero-l{padding:32px 48px 56px;display:flex;flex-direction:column;justify-content:space-between;gap:48px;background:#f5eee4}
+#wc .logo{text-decoration:none;color:#1C1A16;font-family:'Literata',serif;font-size:28px;letter-spacing:-.01em}
+#wc .logo span{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.22em;margin-left:6px;vertical-align:super}
+#wc .hero-top{display:flex;justify-content:space-between;align-items:flex-start;gap:24px}
+#wc .hero-nc{font-family:'Literata',serif;font-style:italic;font-size:40px;line-height:1}
+#wc .hero-lead{max-width:460px;font-size:19px;line-height:1.45}
+#wc .hero h1{margin:0 0 40px;font-family:'Literata',serif;font-weight:400;font-size:62px;line-height:1.02;letter-spacing:-.03em}
+#wc .btns{display:flex;flex-wrap:wrap;gap:12px}
+#wc .hero-r{min-height:860px;display:flex;flex-direction:column;justify-content:space-between}
+#wc .hero-r .shade{position:absolute;inset:0;background:rgba(20,17,14,.28)}
+#wc .nav{position:relative;z-index:1;display:flex;justify-content:flex-end;gap:32px;padding:40px 48px 0}
+#wc .nav a{color:#F6F3EF;text-decoration:none;font:400 14px 'Jost',sans-serif;letter-spacing:.06em}
+#wc .nav a:hover{color:#D6A35C}
+#wc .hero-cap{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:flex-end;padding:0 48px 40px;color:#F6F3EF}
+#wc .hero-cap span:first-child{font-size:13px;letter-spacing:.08em;max-width:260px;line-height:1.5}
+
+/* benefits */
+#wc .ben{display:grid;grid-template-columns:repeat(4,1fr);min-height:660px;padding:80px 0;background:#F6F3EF}
+#wc .ben-c{padding:0 40px;border-left:1px solid #DED7CD;display:flex;flex-direction:column;justify-content:space-between;gap:32px}
+#wc .ben-c:first-child{padding:0 48px;border-left:0}
+#wc .ben h2{font-family:'Literata',serif;font-weight:300;font-size:36px;line-height:1.15;letter-spacing:-.02em}
+#wc .ben h3{margin-top:8px;font-family:'Literata',serif;font-weight:300;font-size:28px}
+#wc .ben p{font-size:15px;line-height:1.55;color:#5E574E}
+#wc .ben .art{color:#8A5A1C}
+#wc .ben .art svg{width:96px;height:96px}
+
+/* work */
+#wc .work{background:#fff;padding:112px 48px}
+#wc .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;margin-bottom:56px}
+#wc .h2xl{font-family:'Literata',serif;font-weight:300;font-size:56px;line-height:1.05;letter-spacing:-.02em;max-width:720px}
+#wc .grid12{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
+#wc .wi{text-decoration:none;overflow:hidden;display:block}
+#wc .wi .ph{transition:transform .6s}
+#wc .wi:hover .ph{transform:scale(1.015)}
+#wc .wi .lbl{padding-top:14px;font-size:15px;color:#5E574E}
+#wc .s7{grid-column:span 7}#wc .s5{grid-column:span 5}#wc .s4{grid-column:span 4}
+#wc .h620{height:620px}#wc .h420{height:420px}
+
+/* services */
+#wc .svc-wrap{background:#fff;border-top:1px solid #E6E0D8}
+#wc .svc-head{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid #E6E0D8}
+#wc .svc-head .cap{padding:48px;display:flex;align-items:center;gap:12px}
+#wc .svc-head h2{grid-column:span 2;padding:48px;font-family:'Literata',serif;font-weight:300;font-size:48px;line-height:1.1;letter-spacing:-.02em;text-transform:uppercase}
+#wc .svc-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+#wc .svc{position:relative;min-height:760px;padding:40px;display:flex;flex-direction:column;justify-content:space-between;transition:background .35s}
+#wc .svc+.svc{border-left:1px solid #E6E0D8}
+#wc .svc:hover{background:#F6F3EF}
+#wc .svc-top{display:flex;justify-content:space-between;align-items:center}
+#wc .svc-img{position:absolute;left:32px;right:32px;top:120px;height:300px;opacity:0;transform:translateY(14px);transition:opacity .4s,transform .4s;border:0;padding:0;cursor:zoom-in;background:none;display:block}
+#wc .svc:hover .svc-img,#wc .svc:focus-within .svc-img{opacity:1;transform:none}
+#wc .svc-img .ph{height:300px;width:100%}
+#wc .svc h3{margin:0 0 16px;font-family:'Literata',serif;font-weight:400;font-size:26px;line-height:1.1;text-transform:uppercase}
+#wc .svc p{font-size:15px;line-height:1.6;color:#5E574E}
+
+/* process */
+#wc .proc{background:#0F0E0C;color:#F6F3EF;display:grid;grid-template-columns:1fr 1fr}
+#wc .proc-pic{position:sticky;top:0;height:800px;background:#3A342D}
+#wc .proc-r{display:flex;gap:24px;padding:96px 48px 96px 80px}
+#wc .proc-r .cap{color:#B9B1A5;margin-bottom:20px}
+#wc .proc h2{margin:0 0 40px;font-family:'Literata',serif;font-weight:300;font-size:48px;line-height:1.1;letter-spacing:-.02em}
+#wc .stp{min-height:620px;padding:48px 0;border-top:1px solid #2E2A25;display:flex;flex-direction:column;gap:28px;opacity:.35;transition:opacity .5s}
+#wc .stp.on{opacity:1}
+#wc .stp .num{font-family:'Literata',serif;font-size:15px;color:#D6A35C}
+#wc .stp h3{font-family:'Literata',serif;font-weight:300;font-size:36px}
+#wc .stp p{max-width:440px;font-size:16px;line-height:1.6;color:#B9B1A5}
+#wc .stp-ph{display:flex;gap:16px}
+#wc .stp-ph .a{width:260px;height:190px}
+#wc .stp-ph .b{width:140px;height:190px}
+#wc .lead{margin-top:48px;background:#1F1C18;padding:36px 40px;text-align:center;max-width:420px}
+#wc .lead .t{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#B9B1A5}
+#wc .lead .v{font-family:'Literata',serif;font-size:52px;line-height:1.1;margin:10px 0 8px;text-transform:uppercase}
+#wc .lead .d{font-size:16px;line-height:1.5;color:#B9B1A5}
+#wc .dots{width:24px;flex:none}
+#wc .dots div{position:sticky;top:360px;display:flex;flex-direction:column;align-items:center;gap:12px}
+#wc .dot{width:8px;height:8px;border-radius:4px;background:#5A544B;transition:all .35s}
+#wc .dot.on{background:#D6A35C;height:28px}
+
+/* reviews */
+#wc .rev{background:#F6F3EF;padding:112px 48px}
+#wc .rev h2{max-width:760px;font-family:'Literata',serif;font-weight:300;font-size:52px;line-height:1.08;letter-spacing:-.02em}
+#wc .rating{display:flex;align-items:center;gap:16px;text-decoration:none;border:1px solid #DED7CD;padding:16px 20px;background:#fff}
+#wc .rating .big{font-family:'Literata',serif;font-size:36px}
+#wc .rating .sm{display:flex;flex-direction:column;gap:4px;font-size:13px;color:#5E574E}
+#wc .stars{color:#B07A2A;letter-spacing:2px}
+#wc .rev-list{column-count:3;column-gap:40px}
+#wc .rv{break-inside:avoid;margin:0 0 40px;border-top:1px solid #1C1A16;padding-top:24px;display:flex;flex-direction:column;gap:18px}
+#wc .rv blockquote{font-family:'Literata',serif;font-weight:300;font-size:18px;line-height:1.5}
+#wc .rv figcaption{display:flex;align-items:center;gap:12px;font-size:14px;color:#5E574E}
+#wc .ini{width:40px;height:40px;border-radius:50%;background:#D6A35C;color:#1C1A16;display:flex;align-items:center;justify-content:center;font:500 16px 'Jost',sans-serif;flex:none}
+#wc .rv .nm{color:#1C1A16;font-size:15px;display:block}
+
+/* faq */
+#wc .faq{background:#fff;padding:112px 48px;display:grid;grid-template-columns:1fr 1fr;gap:80px}
+#wc .faq .cap{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+#wc .faq .cap i{width:8px;height:8px;border-radius:50%;background:#D6A35C;display:inline-block}
+#wc .faq h2{margin:0 0 48px;font-family:'Literata',serif;font-weight:300;font-size:52px;line-height:1.08;letter-spacing:-.02em}
+#wc .faq h2 span{color:#8A5A1C}
+#wc .faq-pic{height:560px}
+#wc .faq-pic img.fill{transition:opacity .4s}
+#wc .faq-nav{position:absolute;right:20px;bottom:20px;display:flex;gap:8px;z-index:1}
+#wc .sq{width:48px;height:48px;border:1px solid #F6F3EF;background:rgba(28,26,22,.25);color:#F6F3EF;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
+#wc .sq:hover{background:#F6F3EF;color:#1C1A16}
+#wc .faq-intro{margin:0 0 40px;font-size:17px;line-height:1.6;color:#5E574E;max-width:520px}
+#wc .faq-list{border-top:1px solid #E6E0D8}
+#wc .faq-it{border-bottom:1px solid #E6E0D8}
+#wc .faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:24px;background:none;border:0;padding:24px 0;cursor:pointer;text-align:left;font:400 20px/1.3 'Jost',sans-serif;color:#1C1A16}
+#wc .faq-q:hover{color:#8A5A1C}
+#wc .pl{width:40px;height:40px;border-radius:50%;border:1px solid #CFC7BC;display:flex;align-items:center;justify-content:center;flex:none;transition:transform .3s}
+#wc .faq-it.on .pl{transform:rotate(45deg);background:#1C1A16;color:#F6F3EF;border-color:#1C1A16}
+#wc .faq-a{display:none;gap:24px;align-items:flex-start;padding:0 0 28px}
+#wc .faq-it.on .faq-a{display:flex}
+#wc .faq-a p{flex:1;font-size:15px;line-height:1.65;color:#5E574E}
+#wc .faq-a .ph{width:150px;height:110px;flex:none}
+
+/* contact */
+#wc .cta{background:#f5eee4}
+#wc .cta-in{padding:112px 48px 80px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end}
+#wc .cta h2{margin:0 0 28px;font-family:'Literata',serif;font-weight:400;font-size:56px;line-height:1.05;letter-spacing:-.02em}
+#wc .cta-in>div>p{margin:0 0 36px;font-size:18px;line-height:1.55;max-width:560px}
+#wc .cts{display:grid;grid-template-columns:1fr 1fr;gap:32px;font-size:15px;line-height:1.6}
+#wc .cts .k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px;color:#5E574E}
+#wc .cts a{text-decoration:none;border-bottom:1px solid #CFC7BC}
+#wc .cts a:hover{border-color:#8A5A1C}
+#wc .map{position:relative;height:480px;background:#E7E3DC;overflow:hidden}
+#wc .map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(1) sepia(.35) contrast(.92) brightness(1.04)}
+#wc .map-pin{position:absolute;left:50%;top:50%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;gap:8px;pointer-events:none}
+#wc .map-pin span{background:#1C1A16;color:#F6F3EF;font-size:13px;padding:8px 14px;letter-spacing:.04em}
+#wc .map-go{position:absolute;left:48px;bottom:32px;font-size:14px;background:#fff;padding:12px 18px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+
+/* lightbox */
+#wc .lb{position:fixed;inset:0;z-index:99999;background:rgba(14,13,11,.94);display:none;align-items:center;justify-content:center;padding:48px}
+#wc .lb.on{display:flex;animation:wcfi .3s ease}
+@keyframes wcfi{from{opacity:0}to{opacity:1}}
+#wc .lb-in{width:100%;max-width:1280px;display:flex;flex-direction:column;gap:20px}
+#wc .lb .ph{width:100%;height:72vh;background:#3A342D}
+#wc .lb .ph img{object-fit:contain}
+#wc .lb-cap{display:flex;justify-content:space-between;gap:24px;color:#F6F3EF}
+#wc .lb-cap .t{font-family:'Literata',serif;font-size:28px}
+#wc .lb-cap .n{font-size:14px;color:#B9B1A5}
+#wc .x{position:absolute;top:24px;right:24px;width:48px;height:48px;border-radius:50%;border:1px solid #6B645A;background:none;color:#F6F3EF;cursor:pointer;display:flex;align-items:center;justify-content:center}
+#wc .x:hover{background:#F6F3EF;color:#1C1A16}
+
+/* ============ TABLET ============ */
+@media (max-width:1199px){
+  #wc .hero h1{font-size:48px}
+  #wc .ben{grid-template-columns:1fr 1fr;row-gap:56px}
+  #wc .ben-c:nth-child(3){border-left:0}
+  #wc .svc{padding:28px}
+  #wc .svc-img{left:20px;right:20px}
+  #wc .proc-r{padding:80px 32px}
+  #wc .rev-list{column-count:2}
+}
+/* ============ MOBILE ============ */
+@media (max-width:899px){
+  #wc .mh{display:flex;position:sticky;top:0;z-index:20;height:64px;padding:0 12px 0 20px;justify-content:space-between;align-items:center;background:#f5eee4}
+  #wc .mh .logo{font-size:22px}
+  #wc .burger{width:44px;height:44px;border:0;background:none;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#1C1A16;padding:0}
+  #wc .mmenu{display:none;position:sticky;top:64px;z-index:19;background:#D6A35C;padding:8px 20px 28px}
+  #wc .mmenu.on{display:block}
+  #wc .mmenu a{display:block;padding:14px 0;font:300 32px 'Literata',serif;color:#1C1A16;text-decoration:none;border-bottom:1px solid rgba(195,146,80,.25)}
+
+  #wc .hero{grid-template-columns:1fr;min-height:0}
+  #wc .hero-r{order:-1;min-height:380px;height:380px}
+  #wc .hero-r .nav,#wc .hero-r .hero-cap,#wc .hero-top{display:none}
+  #wc .hero-l{padding:32px 20px 40px;gap:0;display:flex;flex-direction:column}
+  #wc .hero-lead{order:2;font-size:16px;line-height:1.5;margin-bottom:28px}
+  #wc .hero-l>div:last-child{display:contents}
+  #wc .hero h1{order:1;font-size:40px;line-height:1.04;margin-bottom:20px}
+  #wc .btns{order:3;flex-direction:column;gap:10px}
+  #wc .btns a{width:100%}
+
+  #wc .ben{grid-template-columns:1fr;min-height:0;padding:64px 20px;row-gap:0}
+  #wc .ben-c,#wc .ben-c:first-child{padding:28px 0;border-left:0;border-top:1px solid #DED7CD;display:grid;grid-template-columns:1fr 64px;gap:6px 20px}
+  #wc .ben-c:first-child{border-top:0;padding-top:0;display:block}
+  #wc .ben-c:first-child p{display:none}
+  #wc .ben-c:last-child{border-bottom:1px solid #DED7CD}
+  #wc .ben h2{font-size:32px;margin-bottom:12px}
+  #wc .ben h3{font-size:24px;margin:6px 0 4px}
+  #wc .ben .art{grid-column:2;grid-row:1/span 2}
+  #wc .ben .art svg{width:64px;height:64px}
+  #wc .ben-c p{grid-column:1}
+
+  #wc .work{padding:64px 20px}
+  #wc .sec-head{margin-bottom:32px;gap:24px}
+  #wc .h2xl{font-size:34px;line-height:1.1}
+  #wc .work .sec-head .b2{order:3;width:100%}
+  #wc .grid12{grid-template-columns:1fr 1fr;gap:12px}
+  #wc .s7{grid-column:span 2}
+  #wc .s5,#wc .s4{grid-column:span 1}
+  #wc .h620{height:420px}
+  #wc .s5 .ph,#wc .s4 .ph{height:220px}
+  #wc .wi .lbl{padding-top:8px;font-size:13px}
+
+  #wc .svc-head{grid-template-columns:1fr;padding:56px 20px 32px}
+  #wc .svc-head .cap{padding:0 0 12px;font-size:11px}
+  #wc .svc-head h2{grid-column:auto;padding:0;font-size:30px;line-height:1.15}
+  #wc .svc-grid{grid-template-columns:1fr}
+  #wc .svc{min-height:0;padding:28px 20px 36px;gap:18px}
+  #wc .svc+.svc{border-left:0;border-top:1px solid #E6E0D8}
+  #wc .svc-img{position:static;opacity:1;transform:none;height:260px}
+  #wc .svc-img .ph{height:260px}
+  #wc .svc h3{font-size:24px;line-height:1.15;margin-bottom:12px}
+
+  #wc .proc{grid-template-columns:1fr}
+  #wc .proc>div:first-child{display:none}
+  #wc .proc-r{padding:56px 20px 40px}
+  #wc .proc h2{font-size:32px;line-height:1.12;margin-bottom:24px}
+  #wc .stp{min-height:0;padding:36px 0;gap:18px;opacity:1}
+  #wc .stp h3{font-size:28px}
+  #wc .stp p{font-size:15px}
+  #wc .stp-ph{gap:10px}
+  #wc .stp-ph .a,#wc .stp-ph .b{flex:1;width:auto;height:150px}
+  #wc .dots{display:none}
+  #wc .lead{padding:28px 24px;margin-top:32px}
+  #wc .lead .v{font-size:40px}
+
+  #wc .rev{padding:64px 0}
+  #wc .rev .sec-head{padding:0 20px;margin-bottom:28px}
+  #wc .rev h2{font-size:32px;line-height:1.12}
+  #wc .rating{padding:12px 16px}
+  #wc .rating .big{font-size:28px}
+  #wc .rev-list{column-count:auto;display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 20px 8px;-webkit-overflow-scrolling:touch}
+  #wc .rv{flex:0 0 300px;scroll-snap-align:start;margin:0;background:#fff;border-top:0;padding:24px}
+  #wc .rv blockquote{font-size:17px}
+  #wc .rv figcaption{margin-top:auto}
+
+  #wc .faq{grid-template-columns:1fr;gap:0;padding:64px 20px}
+  #wc .faq .cap{font-size:11px;margin-bottom:12px}
+  #wc .faq h2{font-size:34px;line-height:1.1;margin-bottom:24px}
+  #wc .faq-pic{height:300px;margin-bottom:24px}
+  #wc .faq-intro{display:none}
+  #wc .faq-q{font-size:17px;padding:20px 0;gap:16px}
+  #wc .pl{width:36px;height:36px}
+  #wc .faq-a{flex-direction:column;gap:14px;padding-bottom:22px}
+  #wc .faq-a .ph{width:140px;height:100px}
+  #wc .faq .b1{width:100%}
+
+  #wc .cta-in{grid-template-columns:1fr;gap:36px;padding:64px 20px 40px}
+  #wc .cta h2{font-size:34px;line-height:1.08;margin-bottom:20px}
+  #wc .cta-in>div>p{font-size:16px;margin-bottom:28px}
+  #wc .cta-in .b1{width:100%}
+  #wc .cts{gap:24px;font-size:14px}
+  #wc .cts .k{font-size:11px;margin-bottom:6px}
+  #wc .map{height:320px}
+  #wc .map-go{left:20px;bottom:20px}
+
+  #wc .lb{padding:16px}
+  #wc .lb .ph{height:70vh}
+  #wc .lb-cap .t{font-size:22px}
+  #wc .x{top:16px;right:16px;width:44px;height:44px}
+}
+@media (max-width:420px){
+  #wc .cts{grid-template-columns:1fr}
+}
+</style>
+
+<div id="wc">
+
+<!-- mobile header -->
+<header class="mh">
+  <a class="logo" href="#top">Wallcraft<span>NC</span></a>
+  <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" data-wc-burger><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 8h18M3 16h18"/></svg></button>
+</header>
+<nav class="mmenu" aria-label="Mobile" data-wc-menu>
+  <a href="#services">Services</a><a href="#work">Our Work</a><a href="#process">Process</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+</nav>
+
+<!-- 1 HERO -->
+<section id="top" class="hero">
+  <div class="hero-l">
+    <div class="hero-top">
+      <a class="logo" href="#top">Wallcraft<span>NC</span></a>
+      <span class="hero-nc">NC'</span>
+    </div>
+    <p class="hero-lead">Handcrafted wooden cabinetry, custom wall units, and built-in bookshelves tailored to your space and style. Flawless fit, premium solid wood, and expert local installation.</p>
+    <div>
+      <h1>Custom Kitchen Cabinets &amp; Built-In Furniture in North Carolina</h1>
+      <div class="btns">
+        <a class="b1" href="#contact">Get a Free Estimate <svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 13L13 3M5 3h8v8"/></svg></a>
+        <a class="b2" href="#work">View Our Work</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-r ph dk">
+    <video class="fill" src="https://cdn.jsdelivr.net/gh/ekhorolskaia-jpg/wallcraft@main/images/hero.mp4" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+    <div class="shade" aria-hidden="true"></div>
+    <nav class="nav" aria-label="Main">
+      <a href="#services">Services</a><a href="#work">Our Work</a><a href="#process">Process</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="hero-cap"><span>Solid oak, maple &amp; walnut — designed, built and installed by one local team.</span><span class="serif" style="font-size:15px">01</span></div>
+  </div>
+</section>
+
+<!-- 2 BENEFITS -->
+<section class="ben" aria-labelledby="wc-ben-h">
+  <div class="ben-c">
+    <h2 id="wc-ben-h">Precision Craftsmanship Built for Your Home</h2>
+    <p style="max-width:280px">Hardwood craftsmanship and custom storage, made to fit the way your family lives.</p>
+  </div>
+  <div class="ben-c">
+    <div><div class="muted" style="font-size:12px;letter-spacing:.1em">01</div><h3>Tailored to Your Layout</h3></div>
+    <div class="art"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 56V8h11v37h37v11z"/><path d="M8 16h5M8 23h3M8 30h5M8 37h3M27 56v-5M34 56v-3M41 56v-5M48 56v-3"/><rect x="27" y="10" width="27" height="27" stroke-dasharray="2.5 2.5"/><path d="M27 23.5h27M40.5 10v27"/><circle cx="40.5" cy="23.5" r="2.2"/></svg></div>
+    <p>Every cabinet, wall unit, and bookshelf is custom-designed and built to utilize every inch of your space seamlessly.</p>
+  </div>
+  <div class="ben-c">
+    <div><div class="muted" style="font-size:12px;letter-spacing:.1em">02</div><h3>Premium Natural Hardwood</h3></div>
+    <div class="art"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 14c9.9 0 19 8.2 19 19.5S42.6 53 32 53 13 44.6 13 33.5 22.1 14 32 14z"/><path d="M32 21c6.6 0 12.4 5.5 12.4 12.6S39.2 46 32.3 46 19.8 40.6 19.8 33.6 25.3 21 32 21z"/><path d="M32.2 28c3.3 0 5.9 2.6 5.9 5.7s-2.5 5.6-5.8 5.6-6-2.4-6-5.6 2.6-5.7 5.9-5.7z"/><circle cx="32" cy="33.7" r="1.2"/><path d="M41 17l-5 9 3 3-4 5"/><path d="M32 14V7M32 10c-2-3-5-4-8-3 1 3 4 4.5 8 3zM32 9c2-3 5-4 8-3-1 3-4 4.5-8 3z"/></svg></div>
+    <p>We work with high-grade oak, maple, walnut, and top-tier finishes to create durable, long-lasting furniture.</p>
+  </div>
+  <div class="ben-c">
+    <div><div class="muted" style="font-size:12px;letter-spacing:.1em">03</div><h3>End-to-End Service</h3></div>
+    <div class="art"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 15l15 8.5v17L32 49l-15-8.5v-17z"/><path d="M17 23.5L32 32l15-8.5M32 32v17"/><path d="M55 31a23 23 0 0 1-37 18.5"/><path d="M9 33a23 23 0 0 1 37-18.5"/><path d="M46 9.5v5h-5M18 54.5v-5h5"/></svg></div>
+    <p>From 3D design concepts and precision fabrication to clean on-site installation, we handle your project from start to finish.</p>
+  </div>
+</section>
+
+<!-- 3 OUR WORK -->
+<section id="work" class="work" aria-labelledby="wc-work-h">
+  <div class="sec-head">
+    <div>
+      <div class="cap" style="margin-bottom:16px">(02) Our Work</div>
+      <h2 id="wc-work-h" class="h2xl">Recent Projects Across North Carolina</h2>
+    </div>
+    <a class="b2" href="#contact">Request a Similar Project</a>
+  </div>
+  <div class="grid12">
+    <a class="wi s7" href="#contact"><div style="overflow:hidden"><div class="ph h620"><img class="fill" src="https://cdn.jsdelivr.net/gh/ekhorolskaia-jpg/wallcraft@main/images/work-kitchen.jpg" alt="Custom kitchen project" loading="lazy"></div></div><div class="lbl">Kitchen</div></a>
+    <a class="wi s5" href="#contact"><div style="overflow:hidden"><div class="ph h620" style="background:#BFAF99"><img class="fill" src="https://cdn.jsdelivr.net/gh/ekhorolskaia-jpg/wallcraft@main/images/work-media-wall.jpg" alt="Built-in media wall" loading="lazy"></div></div><div class="lbl">Media wall</div></a>
+    <a class="wi s4" href="#contact"><div style="overflow:hidden"><div class="ph h420" style="background:#BFAF99"><img class="fill" src="https://cdn.jsdelivr.net/gh/ekhorolskaia-jpg/wallcraft@main/images/work-bookshelves.jpg" alt="Custom bookshelves" loading="lazy"></div></div><div class="lbl">Bookshelves</div></a>
+    <a class="wi s4" href="#contact"><div style="overflow:hidden"><div class="ph h420"><img class="fill" src="https://cdn.jsdelivr.net/gh/ekhorolskaia-jpg/wallcraft@main/images/work-pantry.jpg" alt="Custom pantry" loading="lazy"></div></div><div class="lbl">Kitchen</div></a>
+    <a class="wi s4" href="#contact"><div style="overflow:hidden"><div class="ph h420" style="background:#BFAF99"><img class="fill" src="https://cdn.jsdelivr.net/gh/ekhorolskaia-jpg/wallcraft@main/images/work-office.jpg" alt="Home office cabinetry" loading="lazy"></div></div><div class="lbl">Office</div></a>
+  </div>
+</section>
+
+<!-- 4 SERVICES -->
+<section id="services" class="svc-wrap" aria-labelledby="wc-svc-h">
+  <div class="svc-head">
+    <div class="cap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8A5A1C" stroke-width="1.4" aria-hidden="true"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/></svg>(03) Services</div>
+    <h2 id="wc-svc-h">Custom Woodworking &amp; Cabinetry Services in NC</h2>
+  </div>
+  <div class="svc-grid">
+    <article class="svc">
+      <div class="svc-top"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="#8A5A1C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="36" height="12"/><path d="M24 6v12M20 14h-2M30 14h-2M4 26h40"/><rect x="6" y="26" width="36" height="16"/><path d="M18 26v16M30 26v16M10 31h4M22 31h4M34 31h4"/></svg><span class="muted" style="font-size:13px">01</span></div>
+      <button class="svc-img" type="button" data-wc-lb="0" aria-label="Open kitchen cabinets photo fullscreen"><div class="ph"><img class="fill" src="https://cdn.jsdelivr.net/gh/ekhorolskaia-jpg/wallcraft@main/images/service-kitchen.jpg" alt="Custom navy kitchen cabinets with stone countertops" loading="lazy"></div></button>
+      <div>
+        <h3>Custom Kitchen Cabinets</h3>
+        <p>Upgrade the heart of your home with custom-built kitchen cabinetry designed around your lifestyle. Whether you prefer timeless classic wood finishes or clean modern aesthetics, we deliver tailored layouts, deep drawer storage, high-end soft-close hardware, and custom pantry solutions that combine functional utility with elevated aesthetics.</p>
+      </div>
+    </article>
+    <article class="svc">
+      <div class="svc-top"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="#8A5A1C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="6" width="38" height="36"/><rect x="13" y="12" width="22" height="13"/><path d="M5 31h38M17 31v11M31 31v11M23 36h2M8 12h2M8 18h2M38 12h2M38 18h2"/></svg><span class="muted" style="font-size:13px">02</span></div>
+      <button class="svc-img" type="button" data-wc-lb="1" aria-label="Open wall unit photo fullscreen"><div class="ph" style="background:#BFAF99"><img class="fill" src="https://cdn.jsdelivr.net/gh/ekhorolskaia-jpg/wallcraft@main/images/service-wall-unit.jpg" alt="Built-in media wall with fireplace" loading="lazy"></div></button>
+      <div>
+        <h3>Built-In Wall Units &amp; Media Centers</h3>
+        <p>Transform your living room or family space with custom wooden wall units. We craft seamless built-in media cabinets, fireplace surrounds, floating shelving, and custom storage walls designed to eliminate clutter, hide cables, and showcase your decorative display.</p>
+      </div>
+    </article>
+    <article class="svc">
+      <div class="svc-top"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="#8A5A1C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="5" width="36" height="38"/><path d="M6 18h36M6 31h36M10 18V9M13 18v-7M16 18V9M21 18l3-8M30 31v-9M33 31v-7M36 31v-9M11 43v-9M14 43v-7M26 43v-9M29 43v-7"/></svg><span class="muted" style="font-size:13px">03</span></div>
+      <button class="svc-img" type="button" data-wc-lb="2" aria-label="Open bookshelves photo fullscreen"><div class="ph"><img class="fill" src="https://cdn.jsdelivr.net/gh/ekhorolskaia-jpg/wallcraft@main/images/service-bookshelves.jpg" alt="Custom built-in bookshelves" loading="lazy"></div></button>
+      <div>
+        <h3>Custom Bookshelves &amp; Library Units</h3>
+        <p>Create an elegant, organized workspace or home library with floor-to-ceiling custom wooden bookshelves. Built to hold heavy collections, integrate accent lighting, and match your interior architecture, our custom library cabinetry elevates home offices, hallways, and living areas.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- 5 PROCESS -->
+<section id="process" class="proc" aria-labelledby="wc-pr-h">
+  <div><div class="ph proc-pic"><img class="fill" src="https://cdn.jsdelivr.net/gh/ekhorolskaia-jpg/wallcraft@main/images/process-workshop.jpg" alt="Craftsman drafting in the workshop" loading="lazy"></div></div>
+  <div class="proc-r">
+    <div style="flex:1;min-width:0">
+      <div class="cap">(04) Our Process</div>
+      <h2 id="wc-pr-h">How We Bring Your Custom Woodwork to Life</h2>
+      <div class="stp on" data-wc-step="0">
+        <span class="num">01 / 04</span><h3>Consultation</h3><p>Tell us your vision and project goals.</p>
+        <div class="stp-ph"><div class="ph dk a"><img class="fill" src="https://cdn.jsdelivr.net/gh/ekhorolskaia-jpg/wallcraft@main/images/step1-consultation.jpg" alt="" loading="lazy"></div><div class="ph dk b"><img class="fill" src="https://cdn.jsdelivr.net/gh/ekhorolskaia-jpg/wallcraft@main/images/step1-detail.jpg" alt="" loading="lazy"></div></div>
+      </div>
+      <div class="stp" data-wc-step="1">
+        <span class="num">02 / 04</span><h3>Design &amp; Estimate</h3><p>We build a tailored design and price quote.</p>
+        <div class="stp-ph"><div class="ph dk a"><img class="fill" src="https://cdn.jsdelivr.net/gh/ekhorolskaia-jpg/wallcraft@main/images/step2-design.jpg" alt="" loading="lazy"></div><div class="ph dk b"><img class="fill" src="https://cdn.jsdelivr.net/gh/ekhorolskaia-jpg/wallcraft@main/images/step2-detail.jpg" alt="" loading="lazy"></div></div>
+      </div>
+      <div class="stp" data-wc-step="2">
+        <span class="num">03 / 04</span><h3>Production</h3><p>We handcraft each piece in our shop.</p>
+        <div class="stp-ph"><div class="ph dk a"><img class="fill" src="https://cdn.jsdelivr.net/gh/ekhorolskaia-jpg/wallcraft@main/images/step3-production.jpg" alt="" loading="lazy"></div><div class="ph dk b"><img class="fill" src="https://cdn.jsdelivr.net/gh/ekhorolskaia-jpg/wallcraft@main/images/process-workshop.jpg" alt="" loading="lazy"></div></div>
+      </div>
+      <div class="stp" data-wc-step="3">
+        <span class="num">04 / 04</span><h3>Installation</h3><p>We install everything with expert care.</p>
+        <div class="stp-ph"><div class="ph dk a"><img class="fill" src="https://cdn.jsdelivr.net/gh/ekhorolskaia-jpg/wallcraft@main/images/step4-installation.jpg" alt="" loading="lazy"></div><div class="ph dk b"><img class="fill" src="https://cdn.jsdelivr.net/gh/ekhorolskaia-jpg/wallcraft@main/images/step4-detail.jpg" alt="" loading="lazy"></div></div>
+      </div>
+      <div class="lead"><div class="t">Typical lead time</div><div class="v">6–8 weeks</div><div class="d">From final approval to installation.</div></div>
+    </div>
+    <div class="dots" aria-hidden="true"><div><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div></div>
+  </div>
+</section>
+
+<!-- 6 REVIEWS -->
+<section id="reviews" class="rev" aria-labelledby="wc-rv-h">
+  <div class="sec-head" style="margin-bottom:64px">
+    <h2 id="wc-rv-h">What North Carolina Homeowners Say About Wallcraft NC</h2>
+    <a class="rating" href="https://maps.app.goo.gl/pj1BioyqcM22pUoW9" target="_blank" rel="noopener">
+      <span class="big">5.0</span>
+      <span class="sm"><span class="stars" aria-label="5 stars">★★★★★</span>11 reviews on Google ↗</span>
+    </a>
+  </div>
+  <div class="rev-list">
+    <figure class="rv"><svg width="28" height="22" viewBox="0 0 36 28" fill="#D6A35C" aria-hidden="true"><path d="M0 28V16C0 7 5 1.5 14 0l1.5 3.5C10 5 7.5 8.5 7.5 13H14v15zm21 0V16c0-9 5-14.5 14-16l1 3.5C30.5 5 28.5 8.5 28.5 13H35v15z"/></svg><blockquote>Evgenii made my custom built-in dreams come true! He helped me with the design and truly created a beautiful finished product that looks both elegant and functional. The craftsmanship is incredible, and they truly transformed our space. Every detail was thoughtfully done, and I would highly recommend his work. Do not hesitate to hire him for all your custom needs. I will update with more photos once we get it setup!</blockquote><figcaption><span class="ini" aria-hidden="true">C</span><span><span class="nm">Christina Y.</span>★★★★★ · Google review</span></figcaption></figure>
+    <figure class="rv"><svg width="28" height="22" viewBox="0 0 36 28" fill="#D6A35C" aria-hidden="true"><path d="M0 28V16C0 7 5 1.5 14 0l1.5 3.5C10 5 7.5 8.5 7.5 13H14v15zm21 0V16c0-9 5-14.5 14-16l1 3.5C30.5 5 28.5 8.5 28.5 13H35v15z"/></svg><blockquote>I had a great experience with this furniture manufacturing company. The quality of the materials and craftsmanship is excellent, and every detail was finished with care. The team was professional, reliable, and attentive to my requirements throughout the entire process. Production was completed on time, and the final result exceeded my expectations. I highly recommend this manufacturer to anyone looking for durable, stylish, and well-made furniture.</blockquote><figcaption><span class="ini" aria-hidden="true">Z</span><span><span class="nm">Zanna G.</span>★★★★★ · Google review</span></figcaption></figure>
+    <figure class="rv"><svg width="28" height="22" viewBox="0 0 36 28" fill="#D6A35C" aria-hidden="true"><path d="M0 28V16C0 7 5 1.5 14 0l1.5 3.5C10 5 7.5 8.5 7.5 13H14v15zm21 0V16c0-9 5-14.5 14-16l1 3.5C30.5 5 28.5 8.5 28.5 13H35v15z"/></svg><blockquote>Evgenii and his assistant, Irenya were very professional and he does excellent work. His craftsmanship is top notch!</blockquote><figcaption><span class="ini" aria-hidden="true">C</span><span><span class="nm">Cheryl V.</span>★★★★★ · Google review</span></figcaption></figure>
+    <figure class="rv"><svg width="28" height="22" viewBox="0 0 36 28" fill="#D6A35C" aria-hidden="true"><path d="M0 28V16C0 7 5 1.5 14 0l1.5 3.5C10 5 7.5 8.5 7.5 13H14v15zm21 0V16c0-9 5-14.5 14-16l1 3.5C30.5 5 28.5 8.5 28.5 13H35v15z"/></svg><blockquote>Eugene is a meticulous craftsman! We ordered a kitchen bench with storage and it worked great. Very reasonable pricing. We are planning to use Wallcraft Furniture for making our porch furniture</blockquote><figcaption><span class="ini" aria-hidden="true">K</span><span><span class="nm">Kiril S.</span>★★★★★ · Google review</span></figcaption></figure>
+    <figure class="rv"><svg width="28" height="22" viewBox="0 0 36 28" fill="#D6A35C" aria-hidden="true"><path d="M0 28V16C0 7 5 1.5 14 0l1.5 3.5C10 5 7.5 8.5 7.5 13H14v15zm21 0V16c0-9 5-14.5 14-16l1 3.5C30.5 5 28.5 8.5 28.5 13H35v15z"/></svg><blockquote>I had a great experience with Wallcraft furniture. The team was professional, responsive, and the quality of work was excellent. Everything turned out exactly as expected. Highly recommend!</blockquote><figcaption><span class="ini" aria-hidden="true">O</span><span><span class="nm">Olga F.</span>★★★★★ · Google review</span></figcaption></figure>
+    <figure class="rv"><svg width="28" height="22" viewBox="0 0 36 28" fill="#D6A35C" aria-hidden="true"><path d="M0 28V16C0 7 5 1.5 14 0l1.5 3.5C10 5 7.5 8.5 7.5 13H14v15zm21 0V16c0-9 5-14.5 14-16l1 3.5C30.5 5 28.5 8.5 28.5 13H35v15z"/></svg><blockquote>We had great experience with Wallcraft furniture! They did amazing job in our office. We couldn’t be more happier, very professional as well!</blockquote><figcaption><span class="ini" aria-hidden="true">V</span><span><span class="nm">Vesna B.</span>★★★★★ · Google review</span></figcaption></figure>
+    <figure class="rv"><svg width="28" height="22" viewBox="0 0 36 28" fill="#D6A35C" aria-hidden="true"><path d="M0 28V16C0 7 5 1.5 14 0l1.5 3.5C10 5 7.5 8.5 7.5 13H14v15zm21 0V16c0-9 5-14.5 14-16l1 3.5C30.5 5 28.5 8.5 28.5 13H35v15z"/></svg><blockquote>Had a few items on the honey do list that needed advanced help with. Garage racks and hanging a huge barn door. Evjenii helped me out. Both projects came out perfect. I would recommend him.</blockquote><figcaption><span class="ini" aria-hidden="true">P</span><span><span class="nm">Pamela C.</span>★★★★★ · Google review</span></figcaption></figure>
+    <figure class="rv"><svg width="28" height="22" viewBox="0 0 36 28" fill="#D6A35C" aria-hidden="true"><path d="M0 28V16C0 7 5 1.5 14 0l1.5 3.5C10 5 7.5 8.5 7.5 13H14v15zm21 0V16c0-9 5-14.5 14-16l1 3.5C30.5 5 28.5 8.5 28.5 13H35v15z"/></svg><blockquote>Great quality furniture and professional workmanship. Everything was done on time and exactly as discussed. Highly recommend!</blockquote><figcaption><span class="ini" aria-hidden="true">L</span><span><span class="nm">Love F.</span>★★★★★ · Google review</span></figcaption></figure>
+    <figure class="rv"><svg width="28" height="22" viewBox="0 0 36 28" fill="#D6A35C" aria-hidden="true"><path d="M0 28V16C0 7 5 1.5 14 0l1.5 3.5C10 5 7.5 8.5 7.5 13H14v15zm21 0V16c0-9 5-14.5 14-16l1 3.5C30.5 5 28.5 8.5 28.5 13H35v15z"/></svg><blockquote>Wonderful quality and value. Thomas was very professional and responsive. Hight recommend.</blockquote><figcaption><span class="ini" aria-hidden="true">M</span><span><span class="nm">Matt K.</span>★★★★★ · Google review</span></figcaption></figure>
+    <figure class="rv"><svg width="28" height="22" viewBox="0 0 36 28" fill="#D6A35C" aria-hidden="true"><path d="M0 28V16C0 7 5 1.5 14 0l1.5 3.5C10 5 7.5 8.5 7.5 13H14v15zm21 0V16c0-9 5-14.5 14-16l1 3.5C30.5 5 28.5 8.5 28.5 13H35v15z"/></svg><blockquote>Very responsible guys. Everything was manufactured and installed on time. I recommend this company. Thank you for your work …</blockquote><figcaption><span class="ini" aria-hidden="true">J</span><span><span class="nm">Jane</span>★★★★★ · Google review</span></figcaption></figure>
+    <figure class="rv"><svg width="28" height="22" viewBox="0 0 36 28" fill="#D6A35C" aria-hidden="true"><path d="M0 28V16C0 7 5 1.5 14 0l1.5 3.5C10 5 7.5 8.5 7.5 13H14v15zm21 0V16c0-9 5-14.5 14-16l1 3.5C30.5 5 28.5 8.5 28.5 13H35v15z"/></svg><blockquote>Awesome design!!!</blockquote><figcaption><span class="ini" aria-hidden="true">O</span><span><span class="nm">Olga R.</span>★★★★★ · Google review</span></figcaption></figure>
+  </div>
+</section>
+
+<!-- 7 FAQ -->
+<section id="faq" class="faq" aria-labelledby="wc-faq-h">
+  <div>
+    <div class="cap"><i></i>FAQ</div>
+    <h2 id="wc-faq-h">Questions about <span>your custom build</span></h2>
+    <div class="ph faq-pic">
+      <img class="fill" data-wc-gal src="https://cdn.jsdelivr.net/gh/ekhorolskaia-jpg/wallcraft@main/images/faq-main.jpg" alt="Finished custom interior" loading="lazy">
+      <div class="faq-nav">
+        <button class="sq" type="button" data-wc-gal-prev aria-label="Previous photo"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M10 3L5 8l5 5"/></svg></button>
+        <button class="sq" type="button" data-wc-gal-next aria-label="Next photo"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <div style="padding-top:8px">
+    <p class="faq-intro">Everything homeowners usually ask before starting a custom kitchen, wall unit or library project. Can’t find your answer? Ask us during your free consultation.</p>
+    <div class="faq-list">
+      <div class="faq-it on"><button class="faq-q" type="button" aria-expanded="true"><span>How long does a custom cabinetry project take?</span><span class="pl"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M7 1v12M1 7h12"/></svg></span></button>
+        <div class="faq-a"><p>Typical lead time is 6–8 weeks from final approval to installation. You get a clear timeline before we start.</p><div class="ph"><img class="fill" src="https://cdn.jsdelivr.net/gh/ekhorolskaia-jpg/wallcraft@main/images/faq-1.jpg" alt="" loading="lazy"></div></div></div>
+      <div class="faq-it"><button class="faq-q" type="button" aria-expanded="false"><span>Is the estimate really free?</span><span class="pl"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M7 1v12M1 7h12"/></svg></span></button>
+        <div class="faq-a"><p>Yes. We visit your home, discuss your ideas, take measurements and send a personalized project quote — with no obligation.</p><div class="ph"><img class="fill" src="https://cdn.jsdelivr.net/gh/ekhorolskaia-jpg/wallcraft@main/images/faq-2.jpg" alt="" loading="lazy"></div></div></div>
+      <div class="faq-it"><button class="faq-q" type="button" aria-expanded="false"><span>Which woods and finishes can I choose?</span><span class="pl"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M7 1v12M1 7h12"/></svg></span></button>
+        <div class="faq-a"><p>We work with high-grade oak, maple and walnut, plus a range of stains, paints and protective top-coats. We bring samples to your consultation.</p><div class="ph"><img class="fill" src="https://cdn.jsdelivr.net/gh/ekhorolskaia-jpg/wallcraft@main/images/faq-3.jpg" alt="" loading="lazy"></div></div></div>
+      <div class="faq-it"><button class="faq-q" type="button" aria-expanded="false"><span>Do you install the furniture yourselves?</span><span class="pl"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M7 1v12M1 7h12"/></svg></span></button>
+        <div class="faq-a"><p>Yes. Our own team delivers and installs every project, aligns every door and drawer, and leaves your home clean.</p><div class="ph"><img class="fill" src="https://cdn.jsdelivr.net/gh/ekhorolskaia-jpg/wallcraft@main/images/step4-detail.jpg" alt="" loading="lazy"></div></div></div>
+      <div class="faq-it"><button class="faq-q" type="button" aria-expanded="false"><span>Can you match my existing interior?</span><span class="pl"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M7 1v12M1 7h12"/></svg></span></button>
+        <div class="faq-a"><p>Every piece is designed for your space. We prepare 3D design concepts so you can see how the cabinetry fits your architecture and style before fabrication.</p><div class="ph"><img class="fill" src="https://cdn.jsdelivr.net/gh/ekhorolskaia-jpg/wallcraft@main/images/faq-5.jpg" alt="" loading="lazy"></div></div></div>
+      <div class="faq-it"><button class="faq-q" type="button" aria-expanded="false"><span>Which areas of North Carolina do you serve?</span><span class="pl"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M7 1v12M1 7h12"/></svg></span></button>
+        <div class="faq-a"><p>We serve homeowners across North Carolina. Ask us about your location during your free consultation.</p><div class="ph"><img class="fill" src="https://cdn.jsdelivr.net/gh/ekhorolskaia-jpg/wallcraft@main/images/faq-6.jpg" alt="" loading="lazy"></div></div></div>
+    </div>
+    <a class="b1" href="#contact" style="margin-top:40px">Get a Free Estimate <svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 13L13 3M5 3h8v8"/></svg></a>
+  </div>
+</section>
+
+<!-- 8 CONTACT -->
+<section id="contact" class="cta" aria-labelledby="wc-cta-h">
+  <div class="cta-in">
+    <div>
+      <h2 id="wc-cta-h">Ready to Elevate Your Home with Custom Built-In Furniture?</h2>
+      <p>Servicing homes across North Carolina with handcrafted kitchen cabinetry, custom wall units, and bespoke woodwork. Get in touch today for a free consultation and personalized project quote.</p>
+      <a class="b1" href="tel:[PHONE_LINK]">Request Your Free Estimate <svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 13L13 3M5 3h8v8"/></svg></a>
+    </div>
+    <div class="cts">
+      <div><div class="k">Phone</div><a href="tel:[PHONE_LINK]">[PHONE]</a></div>
+      <div><div class="k">Email</div><a href="mailto:[EMAIL]">[EMAIL]</a></div>
+      <div><div class="k">Workshop</div>[STREET ADDRESS]<br>[CITY], NC [ZIP]</div>
+      <div><div class="k">Hours</div>[HOURS]</div>
+      <div><div class="k">Service area</div>North Carolina<br>[CITIES]</div>
+      <div><div class="k">Follow us</div><a href="[INSTAGRAM_URL]" target="_blank" rel="noopener">Instagram</a> · <a href="[FACEBOOK_URL]" target="_blank" rel="noopener">Facebook</a></div>
+    </div>
+  </div>
+  <div class="map">
+    <iframe title="Wallcraft NC on Google Maps" src="https://www.google.com/maps?q=Wallcraft+NC,+North+Carolina&z=12&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    <div class="map-pin" aria-hidden="true">
+      <span>Wallcraft NC</span>
+      <svg width="28" height="36" viewBox="0 0 28 36" fill="#1C1A16"><path d="M14 0C6.3 0 0 6.1 0 13.7 0 24 14 36 14 36s14-12 14-22.3C28 6.1 21.7 0 14 0zm0 19a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/></svg>
+    </div>
+    <a class="map-go" href="https://maps.app.goo.gl/pj1BioyqcM22pUoW9" target="_blank" rel="noopener">Get Directions ↗</a>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lb" role="dialog" aria-modal="true" aria-label="Photo fullscreen" data-wc-lbox>
+  <button class="x" type="button" aria-label="Close" data-wc-lb-close><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 2l14 14M16 2L2 16"/></svg></button>
+  <div class="lb-in">
+    <div class="ph dk"><img class="fill" data-wc-lb-img src="" alt=""></div>
+    <div class="lb-cap"><span class="t" data-wc-lb-title></span><span class="n" data-wc-lb-num></span></div>
+  </div>
+</div>
+
+</div>
+
+<script>
+(function(){
+  var root=document.getElementById('wc'); if(!root) return;
+  var IMG='https://cdn.jsdelivr.net/gh/ekhorolskaia-jpg/wallcraft@main/images/';
+  function $(s,c){return (c||root).querySelector(s)}
+  function $$(s,c){return Array.prototype.slice.call((c||root).querySelectorAll(s))}
+
+  /* hero video autoplay (iOS) */
+  $$('video').forEach(function(v){v.muted=true;v.playsInline=true;var p=v.play();if(p&&p.catch)p.catch(function(){})});
+
+  /* mobile menu */
+  var burger=$('[data-wc-burger]'),menu=$('[data-wc-menu]');
+  if(burger&&menu){
+    burger.addEventListener('click',function(){var on=menu.classList.toggle('on');burger.setAttribute('aria-expanded',on)});
+    $$('a',menu).forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('on');burger.setAttribute('aria-expanded','false')})});
+  }
+
+  /* lightbox */
+  var svcs=[
+    {t:'Custom Kitchen Cabinets',img:IMG+'service-kitchen.jpg'},
+    {t:'Built-In Wall Units & Media Centers',img:IMG+'service-wall-unit.jpg'},
+    {t:'Custom Bookshelves & Library Units',img:IMG+'service-bookshelves.jpg'}
+  ];
+  var lb=$('[data-wc-lbox]'),lbImg=$('[data-wc-lb-img]'),lbT=$('[data-wc-lb-title]'),lbN=$('[data-wc-lb-num]');
+  function openLb(i){var s=svcs[i];lbImg.src=s.img;lbImg.alt=s.t;lbT.textContent=s.t;lbN.textContent='0'+(i+1)+' / 03';lb.classList.add('on')}
+  function closeLb(){lb.classList.remove('on')}
+  $$('[data-wc-lb]').forEach(function(b){b.addEventListener('click',function(){openLb(+b.getAttribute('data-wc-lb'))})});
+  lb.addEventListener('click',function(e){if(e.target===lb||e.target.closest('[data-wc-lb-close]'))closeLb()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb()});
+
+  /* FAQ accordion */
+  $$('.faq-it').forEach(function(it){
+    $('.faq-q',it).addEventListener('click',function(){
+      var was=it.classList.contains('on');
+      $$('.faq-it').forEach(function(o){o.classList.remove('on');$('.faq-q',o).setAttribute('aria-expanded','false')});
+      if(!was){it.classList.add('on');$('.faq-q',it).setAttribute('aria-expanded','true')}
+    });
+  });
+
+  /* FAQ photo arrows */
+  var gal=['faq-main.jpg','faq-1.jpg','faq-2.jpg','faq-3.jpg','faq-5.jpg','faq-6.jpg'].map(function(f){return IMG+f}),gi=0,gimg=$('[data-wc-gal]');
+  function go(d){gi=(gi+d+gal.length)%gal.length;gimg.style.opacity=0;setTimeout(function(){gimg.src=gal[gi];gimg.style.opacity=1},200)}
+  $('[data-wc-gal-prev]').addEventListener('click',function(){go(-1)});
+  $('[data-wc-gal-next]').addEventListener('click',function(){go(1)});
+
+  /* process steps highlight */
+  var steps=$$('[data-wc-step]'),dots=$$('.dot');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var i=+e.target.getAttribute('data-wc-step');
+      steps.forEach(function(s,k){s.classList.toggle('on',k===i)});dots.forEach(function(d,k){d.classList.toggle('on',k===i)})})},{rootMargin:'-45% 0px -45% 0px'});
+    steps.forEach(function(s){io.observe(s)});
+  }
+})();
+</script>
